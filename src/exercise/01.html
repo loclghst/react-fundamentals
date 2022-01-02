@@ -19,18 +19,18 @@
 <!--   📜 https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/append -->
 
 <body>
-    <div id="root"></div>
+    <script type='module'>
+        // create the root div
+        const rootDiv = document.createElement('div');
+        rootDiv.setAttribute('id', 'root');
+
+        // document.getElementsByTagName('body')[0].append(rootDiv);
+        document.body.append(rootDiv);
+
+        const el = document.createElement('div');
+        el.textContent = 'Hello world';
+        el.className = 'container';
+
+        rootDiv.append(el);
+    </script>
 </body>
-<script>
-    // create the root div
-    const rootDiv = document.createElement('div');
-    rootDiv.setAttribute('id', 'root');
-
-    document.getElementsByTagName('body')[0].append(rootDiv);
-
-    const el = document.createElement('div');
-    el.textContent = 'Hello world';
-    el.className = 'container';
-
-    document.getElementById('root').append(el);
-</script>
